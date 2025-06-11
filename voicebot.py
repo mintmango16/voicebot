@@ -129,20 +129,6 @@ def main():
         st.subheader("질문하기")
         st.info("아래 'Start' 버튼을 눌러 마이크 스트림을 시작하고, 'Stop' 버튼을 누르면 종료됩니다.")
 
-        # 텍스트 입력 필드
-        question = st.text_input("여기에 질문을 입력하세요:")
-
-        if st.button("질문하기"):
-            if question and (st.session_state["check_reset"]==False):
-                # STT 단계 없이 바로 텍스트 질문 사용
-                now = datetime.now().strftime("%H:%M")
-                st.session_state["chat"] = st.session_state["chat"]+[("user", now, question)]
-                st.session_state["messages"] = st.session_state["messages"]+[{"role": "user", "content": question}]
-            elif not question:
-                st.warning("질문을 입력해주세요.")
-            else:
-                st.warning("오류가 발생했습니다.") # reset 상태이거나 다른 문제 발생 시
-    
         # streamlit-webrtc 스트림 컴포넌트
         webrtc_ctx = webrtc_streamer(
             key="voice_assistant",
