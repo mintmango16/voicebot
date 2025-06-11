@@ -1,7 +1,7 @@
 #streamlit run voicebot.py
 import streamlit as st
 # from audiorecorder import audiorecorder # <-- 이 줄을 주석 처리하거나 삭제합니다.
-from streamlit_audiorecorder import st_audiorec # <-- 이 줄을 새로 추가합니다.
+from streamlit-audiorecorder import st_audiorec # <-- 이 줄을 새로 추가합니다.
 
 import openai
 import os
