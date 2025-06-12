@@ -60,7 +60,7 @@ def TTS(response):
 def main():
     # 기본 설정
     st.set_page_config(
-        page_title="🔊 250611 음성 비서 프로그램_by chaeyeon",
+        page_title="음성 비서",
         layout="wide")
 
     flag_start = False
@@ -78,12 +78,12 @@ def main():
 
 
     # 제목 
-    st.header("음성 비서 프로그램")
+    st.header("🔊 250611 음성 비서 프로그램_by chaeyeon")
     # 구분선
     st.markdown("---")
 
     # 기본 설명
-    with st.expander("음성비서 프로그램에 관하여", expanded=True):
+    with st.expander("📜 음성비서 프로그램 설정", expanded=True):
         st.write(
         """     
         - UI : Streamlit
