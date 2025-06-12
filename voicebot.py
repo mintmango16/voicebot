@@ -114,13 +114,7 @@ def main():
             st.session_state["chat"] = []
             st.session_state["messages"] = [{"role": "system", "content": "You are a thoughtful assistant. Respond to all input in 25 words and answer in korea"}]
 
-        st.markdown("---")
-        st.image("https://wikibook.co.kr/images/cover/m/9791158394608.png")
-
-        st.markdown('''
-<a style="font-size:30px;" href="https://wikibook.co.kr/chatgpt-api/">도서 페이지로 이동</a>
-</font>
-''',unsafe_allow_html=True)
+    
     # 기능 구현 공간
     col1, col2 =  st.columns(2)
     with col1:
